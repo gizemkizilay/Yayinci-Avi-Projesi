@@ -1,12 +1,11 @@
 **Proje ve Hedefler ve Ozellikler:** 
 
 
-
-Bu proje, bir bilgisayar ağındaki yazılımcıları, ağ trafiği analiz aracı olan Wireshark kullanarak tespit etmeyi amaçlamaktadır. Temel hedef, yazılımcıların karakteristik ağ aktivitelerini (örneğin, Git/SSH kullanımı, IDE'ler ve kod editörlerinden kaynaklanan trafik, geliştirme/test sunucularına erişim, API test araçları trafiği, sanal makine/konteyner etkileşimleri ve özel port/protokol kullanımları) analiz ederek ayırt edici dijital izlerini belirlemektir. Proje kapsamında, bu özel trafik desenlerini etkin bir şekilde saptamak ve diğer ağ trafiğinden ayrıştırmak amacıyla hem canlı veri yakalama aşamasında (capture filters) hem de yakalanmış verilerin incelenmesi sırasında (display filters) kullanılacak kapsamlı ve özelleştirilmiş Wireshark filtreleri oluşturulacaktır. Bu filtreler, yazılımcılara özgü uygulamaların, servislerin ve davranış kalıplarının tespiti üzerine yoğunlaşarak, ağ üzerindeki yazılımcı varlığını ve faaliyetlerini yüksek doğrulukla belirlemeyi hedeflemektedir.
-
+Yayıncı Avı Projesi, çevrimiçi yayın ve iletişim platformlarına (Twitch, YouTube Stream, Microsoft Teams, Google Meet, Zoom vb.) bağlanıldığında kullanılan IP adreslerini, sunucuları ve port numaralarını tespit etmeyi amaçlayan bir ağ analiz projesidir. Proje kapsamında, bu platformlara yayın yaparken veya yayın izlerken oluşan ağ trafiği incelenerek hangi sunucularla iletişim kurulduğu belirlenir. Wireshark gibi paket analiz araçları kullanılarak bu trafik detaylı şekilde yakalanır ve analiz edilir. Bu süreçte hem capture filter'lar (yayın trafiğini seçici şekilde yakalamak için), hem de display filter'lar (yakalanan trafiği sınıflandırmak ve incelemek için) oluşturulur. Her platformun kullandığı altyapı, CDN'ler (örneğin Google için googlevideo.com alt alanları) ve bağlantı protokolleri analiz edilir. Hedef, bu platformların ağ düzeyinde nasıl çalıştığını ortaya koymaktır. Projenin ileri aşamasında, tüm bu analiz sürecini otomatikleştirecek bir Python betiği geliştirilerek IP tespiti ve filtreleme işlemleri komut satırından yürütülebilir hale getirilir. Böylece benzer projelerde veya adli analizlerde hızlı ve otomatik trafik inceleme imkânı sağlanır. Proje, ağ güvenliği, tersine mühendislik ve yayın altyapısı analizi konularında pratik bilgi kazandırmayı hedefler.
 
 
-**Görev:** 2025 yılı için [Developer Hunter, 'wireshark kullanarak yazilimcilari agda tesbit etmek (Yazilimci Avi)'] alanındaki en son ve en etkili ilk 10 tekniği/trendi derinlemesine araştır ve belirle.
+
+**Görev:** 2025 yılı için [Publisher Hunt Project, 'wireshark kullanarak yazilimcilari agda tesbit etmek (Yazilimci Avi)'] alanındaki en son ve en etkili ilk 10 tekniği/trendi derinlemesine araştır ve belirle.
 
 
 
@@ -38,14 +37,14 @@ Bu proje, bir bilgisayar ağındaki yazılımcıları, ağ trafiği analiz arac�
 
 
 
-**Örnek Alanlar (Projenize Göre Değiştirin):**
+**Örnek Alanlar :**
 
-- Yazılım Geliştirme Metodolojileri
+-İnternet Yayınları ve Bağlantı Takibi
 
-- Veri Bilimi ve Makine Öğrenimi Uygulamaları
+-Ağ Trafiği Yakalama ve Analizi
 
-- Blokzincir Teknolojileri
+-Wireshark Kullanımı ve Temel Filtreler
 
-- Dijital Pazarlama Stratejileri
+-IP ve Port Numarası Öğrenme Teknikleri
 
-- İnsan-Bilgisayar Etkileşimi Arayüzleri
+-Canlı Yayın Platformlarının Temel Ağ Yapısı
