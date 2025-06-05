@@ -185,6 +185,7 @@ gelmektedir. Zemin doğruluk etiketlemesi için şifre çözme anahtarlarına er
 zamanlı analiz için olmasa bile) paha biçilmezdir. 
 Aşağıdaki tablo, şifrelenmiş trafik sınıflandırması ve anomali tespiti için 2025 yılındaki 
 YZ/ML modellerinin mevcut durumunu özetlemektedir. 
+
 Tablo 1: Şifrelenmiş Trafik Sınıflandırması ve Anomali Tespiti için YZ/ML 
 Modelleri (2025) 
  
