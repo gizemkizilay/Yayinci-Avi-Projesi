@@ -40,24 +40,24 @@ tarafından benimsenen QUIC (Quick UDP Internet Connections) protokolünün
 yaygınlaşmasıyla köklü bir dönüşüm geçirmiştir. QUIC, hem güvenlik hem de 
 performans açısından önemli iyileştirmeler sunmaktadır.1 HTTP/3, QUIC üzerine inşa 
 edilmiş olup, 2023 yılında HTTP isteklerinin yaklaşık %30'unu oluşturarak giderek 
-yaygınlaşmaktadır ve büyümesinin devam etmesi beklenmektedir.2 
+yaygınlaşmaktadır ve büyümesinin devam etmesi beklenmektedir.
 Taşıma Katmanı Güvenliği (TLS) protokolünün en son sürümü olan TLS 1.3, her oturum 
 için Mükemmel İleri Gizlilik (PFS) sağlamak amacıyla geçici Diffie-Hellman anahtar 
-değişimi kullanımını zorunlu kılmaktadır.3 Bu değişiklik, sunucu özel anahtarlarına erişim 
+değişimi kullanımını zorunlu kılmaktadır. Bu değişiklik, sunucu özel anahtarlarına erişim 
 olsa bile trafiğin pasif olarak şifresinin çözülmesini önemli ölçüde zorlaştırmaktadır.3 
 Hem QUIC hem de TLS 1.3, el sıkışmanın ve başlıkların önemli kısımları da dahil olmak 
 üzere tüm iletişimi şifrelemektedir. Bu durum, geleneksel Derin Paket İncelemesi (DPI) 
 ve Saldırı Tespit/Önleme Sistemlerini (IDS/IPS) büyük ölçüde etkisiz hale getirmektedir.2 
 QUIC'in bağlantı geçişi ve Bağlantı Kimliklerinin (CID'ler) sık rotasyonu gibi doğal 
 özellikleri, trafik analizini daha da karmaşıklaştırmakta ve ağ müdahalesine karşı daha 
-dirençli hale getirmektedir.2 Bu durum, "Yayıncı Avı Projesi"nin geleneksel yük 
+dirençli hale getirmektedir. Bu durum, "Yayıncı Avı Projesi"nin geleneksel yük 
 incelemesine dayalı yaklaşımlardan uzaklaşmasını gerektirmektedir. 
 İçerik Dağıtım Ağlarının (CDN'ler) Merkezi Rolü 
 CDN'ler, yalnızca içerik dağıtımına odaklanmaktan, güvenli, yüksek performanslı ve 
 gerçek zamanlı içerik dağıtımı, uç bilişim ve bulut tabanlı hizmetler sunan kapsamlı 
-hizmet paketlerine dönüşmüştür.6 Video akış hizmetleri, 4K ve 8K gibi yüksek 
+hizmet paketlerine dönüşmüştür. Video akış hizmetleri, 4K ve 8K gibi yüksek 
 çözünürlüklü içeriklere olan artan talep ve düşük gecikme süresi gereksinimleri için 
-vazgeçilmezdirler.6 
+vazgeçilmezdirler.
 CDN'ler, kullanıcı isteklerini en yakın uç sunucuya yönlendirmek için Anycast DNS gibi 
 teknikleri kullanarak performansı optimize etmekte ve ağ tıkanıklığını yönetmektedir.7 
 Alan adlarını CDN altyapısına eşlemek için CNAME ve A/AAAA kayıtları gibi DNS 
@@ -114,9 +114,11 @@ trafiğini tanımlamak ve karakterize etmek için sadece bir iyileştirme değil
 olduğu anlamına gelmektedir. YZ/ML, daha önce opak olan trafiğe ilişkin bilgiler 
 sağlamakta ve büyük ölçekte insanlar için imkansız olan görevleri 
 otomatikleştirmektedir. Bu durum, bu modelleri eğitmek için veri kalitesi hakkında da 
-soruları gündeme getirmektedir.1 
+soruları gündeme getirmektedir.
+
 III. Yayıncı Avı Projesi için 2025 Yılının En İyi 10 Gelişmiş Tekniği ve 
 Eğilimi 
+
 1. Şifrelenmiş Trafik Sınıflandırması ve Anomali Tespiti için Yapay Zeka/Makine 
 Öğrenimi 
 Geleneksel Derin Paket İncelemesinin (DPI) yaygın şifreleme (QUIC, TLS 1.3) nedeniyle 
