@@ -124,15 +124,15 @@ Eğilimi
 Geleneksel Derin Paket İncelemesinin (DPI) yaygın şifreleme (QUIC, TLS 1.3) nedeniyle 
 sınırlamaları göz önüne alındığında, Yapay Zeka (YZ) ve Makine Öğrenimi (ML), 
 şifrelenmiş trafiği şifre çözmeye gerek kalmadan sınıflandırmak ve anormallikleri tespit 
-etmek için vazgeçilmez hale gelmektedir.1 Bu yaklaşım, yük içeriği yerine 
+etmek için vazgeçilmez hale gelmektedir. Bu yaklaşım, yük içeriği yerine 
 gözlemlenebilir meta veri özelliklerinin analizine odaklanmaktadır. 
 Şifrelenmiş Trafik Sınıflandırma Teknikleri: 
 
 ● Meta Veri Analizi: Paket boyutu, paketler arası varış süreleri, akış süresi, paket 
-yönü ve akışlardaki bayt dağılımı gibi özelliklere odaklanılmaktadır.11 Bu 
+yönü ve akışlardaki bayt dağılımı gibi özelliklere odaklanılmaktadır. Bu 
 "gözlemlenebilir paket özellikleri", protokol sınıflandırması ve şifrelenmiş trafik 
 parmak izi için yüksek doğruluk (örneğin, VisQUIC verileri kullanılarak HTTP/3 yanıt 
-tahmini için %97) sağlayabilmektedir.1 
+tahmini için %97) sağlayabilmektedir.
 
 ● Dalgacık Dönüşümleri ve Eğilim Özellikleri: Dalgacık Dönüşümleri (WT) gibi 
 gelişmiş özellik çıkarma teknikleri, ağ trafiğinin hem zaman hem de frekans alanı 
@@ -144,15 +144,15 @@ sağlamaktadır.11 Bu yaklaşım, veri kümesi filtrelemesiyle bile yüksek F1 p
 
 ● Makine Öğrenimi Modelleri: Çeşitli ML ve Derin Öğrenme (DL) algoritmaları 
 kullanılmaktadır. Random Forest (RF) ve Sinir Ağları (NN), şifrelenmiş trafik 
-sınıflandırmasında güçlü performans sergilemektedir.12 Otomatik kodlayıcılar 
-(Autoencoders) karmaşık desen tespiti için uygundur.19 
+sınıflandırmasında güçlü performans sergilemektedir. Otomatik kodlayıcılar 
+(Autoencoders) karmaşık desen tespiti için uygundur.
 Anomali Tespitine Uygulama: 
 ● Gerçek Zamanlı Anomali Tespiti: YZ destekli çözümler, ağ anormalliklerini daha 
 hızlı tespit etmekte, trafik davranışını analiz ederek sıfırıncı gün saldırılarını 
 belirlemekte ve tahmine dayalı analizler aracılığıyla düzeltme eylemlerini 
 otomatikleştirebilmektedir.18 Bu, tehlikeye atılmış bir akış hesabını veya yeni bir 
 saldırı vektörünü gösterebilecek olağandışı iletişim modellerini belirlemek için kritik 
-öneme sahiptir.19 
+öneme sahiptir.
 
 ● Temel Çizgilerin Oluşturulması: ML modelleri, geçmiş verilerden "normal" ağ 
 davranışını öğrenmekte ve sapmaları anomali olarak işaretlemektedir.19 Bu, 
@@ -367,6 +367,7 @@ anormallikler
  i tespit 
 etmek zor 
 olabilir 
+
 2. Python (PyShark/Scapy) ile Gelişmiş Wireshark Betikleme ve Otomasyonu 
 Wireshark, ağ analizi için temel bir araç olmaya devam etmekte, güçlü paket yakalama, 
 filtreleme, görselleştirme, protokol desteği ve istatistiksel analiz yetenekleri 
@@ -483,6 +484,7 @@ DNS Çözümlemesi Yoluyla Doğru CDN Haritalaması:
 yönlendirmek için öncelikle DNS yönlendirme yöntemlerini (CDN alan adlarına 
 eşlenen CNAME kayıtları veya doğrudan A/AAAA kayıtları) kullanmaktadır.7 Bu DNS 
 kayıtlarının analizi, CDN kullanımını belirlemede birincil adımdır. 
+
 ● Anycast DNS ve EDNS-Client-Subnet (ECS): CDN'ler, sorguları en yakın 
 kullanılabilir sunucuya yönlendirmek için Anycast DNS'i kullanmakta 7, bu da 
 gecikmeyi azaltmaktadır.8 EDNS-Client-Subnet (ECS) DNS uzantısı, genel DNS 
@@ -491,6 +493,7 @@ CDN eşlemeleri sağlamasına yardımcı olmakta, böylece CDN'lerin coğrafi ol
 optimize edilmiş yanıtlar döndürmesine olanak tanımaktadır.30 DNS sorgu 
 yanıtlarının, gecikme ve döndürülen IP adresleri dahil olmak üzere analiz edilmesi, 
 CDN eşleme stratejilerini ortaya çıkarabilir.30 
+
 ● Genel DNS Çözümleyici Performansı: Farklı genel DNS çözümleyicileri (Google, 
 Cloudflare, OpenDNS, Quad9), sorgu yanıt süreleri ve CDN istemciden uç 
 sunucuya eşlemelerinin kalitesi açısından farklılık göstermektedir.30 Cloudflare-R, 
@@ -498,17 +501,20 @@ genel çözümleyiciler arasında genellikle daha düşük gecikme süreleri
 göstermektedir.30 
 Otonom Sistem Numaralarından (ASN'ler) ve IP Coğrafi Konumlandırmadan 
 Yararlanma: 
+
 ● ASN Arama: Tek bir yönlendirme politikasına sahip büyük bir ağ veya ağ grubu 
 olan her Otonom Sisteme (AS) benzersiz bir ASN atanmaktadır.31 Tanımlanan IP 
 adresleri için ASN aramaları yapmak, sahibi olan şirketi veya kuruluşu (örneğin, bir 
 İSS, büyük bir teknoloji şirketi veya bir CDN sağlayıcısı) ve ağ kimliğini belirlemeye 
 yardımcı olmaktadır.31 Bu, akış altyapısının ağ sınırlarını ve bağlantılarını anlamak 
 için kritik öneme sahiptir. 
+
 ● IP Coğrafi Konumlandırma: Fastly'nin Digital Element verileriyle entegrasyonu 
 gibi IP tabanlı coğrafi konumlandırma hizmetleri, bir IP adresinin yaklaşık fiziksel 
 konumunu belirlemektedir.9 Doğruluk değişebilir (örneğin, işletmeler yerel 
 kullanıcılardan daha doğru, mobil cihazlar daha az hassas), ancak CDN uç 
 sunucularının genel bölgesini ve ülkesini belirlemek için faydalıdır.10 
+
 ● Veri Korelasyonu: DNS çözümleme sonuçları, ASN bilgileri ve IP coğrafi 
 konumlandırma verilerinin birleştirilmesi, akış platformu altyapısının dağıtık 
 doğasının kapsamlı bir şekilde anlaşılmasını sağlamakta, içeriğin en yakın uç 
@@ -680,6 +686,7 @@ veya standart protokollerin özel uygulamalarını kullanabilir. Geleneksel Wire
 dissektörleri bunları tam olarak çözemeyebilir, bu da tersine mühendisliği gerekli 
 kılmaktadır. 
 Protokol Çıkarımı için Metodolojiler: 
+
 ● Veri Odaklı Konkolik Yürütme (ICEPRE prensipleri): ICEPRE, özellikle 
 Endüstriyel Kontrol Sistemleri (ICS) protokolleri için tasarlanmış olsa da, protokol 
 sözdizimini, anlambilimini ve durum makinelerini ağ izlerinden ve statik analizden 
@@ -687,15 +694,18 @@ sözdizimini, anlambilimini ve durum makinelerini ağ izlerinden ve statik anali
 için program ayrıştırma süreçlerini statik olarak izlemeyi ve bir protokol 
 ayrıştırıcısının farklı alanları nasıl işlediğini analiz ederek alan sınırı çıkarım 
 stratejilerini kullanmayı içerir.33 
+
 ● Sezgisel Dissector Geliştirme: İlk analiz için, Wireshark'ın sezgisel dissektörleri, 
 paket başlıklarında veya yüklerinde gözlemlenen kalıplara dayanarak 
 geliştirilebilir.27 Bu, sihirli baytları, belirli tip alanlarını, bayrakları veya uzunluk 
 alanlarını tanımlamayı içerir.27 Bu, tam bir spesifikasyon olmasa bile kısmi 
 ayrıştırma ve tanımlama sağlar. 
+
 ● Desen Tanıma ve İstatistiksel Analiz: Paket uzunluğu dağılımları, zamanlama 
 modelleri ve bayt frekanslarının analizi, bilinmeyen bir protokolün yapısal öğelerini 
 ortaya çıkarabilir. Wireshark'ın istatistiksel araçları 23, bu konuda yardımcı olabilir, 
 ortak paket boyutlarını, akış özelliklerini ve protokol hiyerarşilerini belirleyebilir. 
+
 ● Kontrollü Ortam Analizi: Platformla sistematik olarak etkileşimde bulunurken 
 kontrollü bir ortamdan (örneğin, akış istemcisini çalıştıran bir sanal makine) trafik 
 yakalamak, istek/yanıt yapılarını ve veri kodlamasını belirlemeye yardımcı olan 
@@ -729,16 +739,20 @@ Adli Bilişim Araçlarının Uyarlanması: Geleneksel adli bilişim araçları, 
 uygulanamamaktadır.34 Bu nedenle, bulut güvenliği adli bilişimi bir zorunluluk haline 
 gelmektedir.34 
 Bulut Trafik Analizi Stratejileri: 
+
 ● Bulut Yerel Akış İzleme: Modern akış tabanlı izleme çözümleri, buluttan buluta 
 trafik izleme, bölgeler arası veri akışı görünürlüğü ve bulut yerel güvenlik 
 araçlarıyla entegrasyon sunmaktadır.18 Bu, dağıtık ağ etkinliğine gerekli 
 görünürlüğü sağlamaktadır. 
+
 ● Çoklu Akış Toplama Noktaları: Veri merkezleri, bulut ortamları, şube ofisleri ve 
 uç bilişim konumları boyunca akış toplayıcıların dağıtılması, kapsamlı görünürlük 
 için esastır.18 
+
 ● Akış ve Paket Verilerinin Birleştirilmesi: Akış verileri üst düzey bilgiler sağlarken, 
 bunu Wireshark gibi paket yakalama araçlarıyla birleştirmek, bulut ortamlarındaki 
-belirli ağ sorunlarını teşhis etmek için kritik öneme sahiptir.18 
+belirli ağ sorunlarını teşhis etmek için kritik öneme sahiptir.
+
 ● Veri Parçalanmasını Ele Alma: Araştırmacılar, veri toplama süresini önemli 
 ölçüde uzatabilen platformlar arası, yargı yetkisi arası veri izleme ve analizine 
 uyum sağlamalıdır.15 
@@ -762,10 +776,12 @@ YZ destekli siber güvenlik, reaktif tespitten proaktif tehdit modellemesi ve m�
 doğru kaymaktadır.34 Bu, YZ'yi yalnızca bilinen tehditleri belirlemek için değil, aynı 
 zamanda saldırıları tahmin etmek ve önlemek için de kullanmayı içermektedir. 
 Sofistike Tehditlerin Belirlenmesi: 
+
 ● Normal Trafikle Harmanlama: Gelişmiş Kalıcı Tehditler (APT'ler), normal ağ 
 trafiğiyle harmanlanacak şekilde tasarlanmıştır ve bu da tespit edilmelerini son 
 derece zorlaştırmaktadır.16 YZ odaklı anomali tespiti, bu ince sapmaları belirlemek 
 için kritik öneme sahiptir.19 
+
 ● QUIC Üzerinden Komuta ve Kontrol (C2): QUIC'in şifrelemesi ve doğal özellikleri 
 (örneğin, bağlantı geçişi, dinamik IP değişiklikleri), QUIC tabanlı veri sızdırma ve C2 
 kanallarının tespitini zorlaştırmaktadır.2 Ancak, QUIC el sıkışması, ana paket türleri 
@@ -773,6 +789,7 @@ ve Bağlantı Kimliklerinin RITA, Wireshark, Zeek ve özel Python uygulamaları 
 araçlar kullanılarak analizi, tespit fırsatlarını belirleyebilir.35 Değişen gecikme 
 ayarlarıyla bile kalıcı QUIC bağlantıları, yüksek önem derecesine sahip uzun 
 bağlantılar olarak işaretlenebilir.35 
+
 ● İnsan Dışı Kimlikler (NHI): Makine kimliklerinin yaygınlaşması, saldırılar için 
 kullanılabilecek yeni bir zorluk teşkil etmektedir.17 YZ, karmaşık bulut ortamlarında 
 NHI'leri yönetmeye ve güvence altına almaya yardımcı olabilir.17 
@@ -807,7 +824,9 @@ Bütünsel Kimlik Merkezli Model: Bütünsel bir model, ihlal, kötü amaçlı y
 kombinasyon listesi ve kimlik avı maruziyetlerini, tek bir bireye ait çevrimiçi kişilikleri 
 boyunca bir araya getirmektedir.37 Bu, suçluların kullanabileceği çalınan verilerin 
 kapsamını vurgulayan kapsamlı bir kimlik maruziyeti resmi sunmaktadır.37 
+
 Ağ Trafiğini Kimlik Verileriyle İlişkilendirme: 
+
 ● İçeriden Tehditler ve Kimlik Bilgisi Sızıntıları: Ağ analizi, şüpheli iletişim 
 modellerini veya veri sızdırmayı tespit edebilir.22 Bu, maruz kalmış kimlik bilgileri 16 
 veya oturum çerezleri 37 hakkındaki istihbaratla ilişkilendirildiğinde, tehlikeye 
@@ -817,6 +836,7 @@ IP'lere odaklanırken, yeni yaklaşımlar, meta verileri, paket boyutlarını, z
 ve uç noktaları inceleyerek şifreli trafikten kullanıcıları ve uygulama kullanımlarını 
 belirlemeyi amaçlamaktadır.20 Bu dahili ağ davranışı daha sonra harici kimlik 
 maruziyeti verileriyle çapraz referans edilebilir. 
+
 ● İnsan Dışı Kimlikler (NHI): Makine kimliklerinin yaygınlaşması 17, ağ trafiğinin 
 otomatik süreçlerden kaynaklanabileceği anlamına gelmektedir. Bunu kimlik 
 maruziyeti istihbaratıyla ilişkilendirmek, tehlikeye atılmış NHI'leri belirlemeye 
@@ -845,14 +865,17 @@ Kripto-Çeviklik: Kuantum çağı, kuruluşların yeni, kuantum dirençli kripto
 algoritmalara hızla geçiş yapmaya hazır olmaları anlamına gelen "kripto-çeviklik"i 
 gerektirmektedir.34 
 Ağ Analizi için Çıkarımlar: 
+
 ● Gelecekteki Şifreleme Zorlukları: 2025 için acil bir endişe olmasa da, uzun 
 vadeli çıkarım, yeni kuantum dirençli algoritmaların benimsenmesiyle ağ trafiği 
 analizi için bir başka karmaşıklık katmanı getireceğidir. Bu yeni algoritmalar, farklı 
 el sıkışma özelliklerine, anahtar değişim mekanizmalarına veya yeni analiz 
 teknikleri gerektiren trafik modellerine sahip olabilir. 
+
 ● Geriye Dönük Uyumluluk Sorunları: Geçiş dönemi, geleneksel ve kuantum 
 dirençli kriptografinin bir karışımını içerebilir, bu da analizi karmaşıklaştırır ve 
 araçların çeşitli şifreleme şemalarına uyum sağlamasını gerektirir. 
+
 ● Veri Şifre Çözme (Kuantum Sonrası): Mevcut şifreleme kuantum bilgisayarlar 
 tarafından kırılabilir hale gelirse, teorik olarak geçmiş trafik yakalamalarının 
 şifresini çözme olasılıklarını açabilir, ancak bu aynı zamanda kötü niyetli aktörler 
@@ -875,31 +898,44 @@ denge sağlamak üzere etkilemelidir.
 Etik ve yasal hususlar siber güvenlikte çok önemlidir; sorumlu karar vermeye rehberlik 
 eder, güvenlik ihtiyaçlarını gizlilik haklarıyla dengelemeyi sağlar ve kamu güvenini 
 sürdürür.38 
+
 Temel Etik İlkeler: 
+
 ● Kişilere Saygı: Kişisel verileri toplamadan önce bilgilendirilmiş onay almayı, 
 gizliliği ve mahremiyeti korumayı ve adil muameleyi sağlamayı gerektirir.38 
+
 ● Yararlılık ve Zarar Vermeme: Başkalarına fayda sağlayan eylemlerde bulunmak 
 ve zarardan veya gereksiz risklerden kaçınmak.38 
+
 ● Adalet, Dürüstlük, Hesap Verebilirlik: Adil muameleyi, şeffaflığı ve eylemlerden 
 sorumluluğu sağlamak.38 
 Veri Gizliliği Düzenlemelerinde (GDPR, CCPA) Gezinme: 
+
 ● Uygulanabilirlik: Hem GDPR (Genel Veri Koruma Yönetmeliği) hem de CCPA 
 (California Tüketici Gizliliği Yasası), kişisel verileri işleyen kuruluşlar için katı 
 gereksinimler getirmektedir.39 CCPA, yıllık brüt geliri 25 milyon doları aşan veya 
 50.000'den fazla tüketici/cihazın kişisel verilerini ticari amaçlarla işleyen veya yıllık 
 gelirinin %50'sinden fazlasını kişisel bilgi satışından elde eden işletmeler için 
 geçerlidir.40 
+
 ● Uyumluluk Adımları: 
+
 ○ Veri Haritalaması: Hangi kişisel verilerin toplandığını, nasıl işlendiğini, 
 saklandığını ve paylaşıldığını anlamak.39 
+
 ○ Gizlilik Politikaları: Tüketicileri veri uygulamaları hakkında şeffaf bir şekilde 
 bilgilendirmek.39 
+
 ○ Vazgeçme Mekanizmaları: Tüketicilere veri satışından vazgeçmeleri için 
 (CCPA) açık yollar sağlamak.39 
+
 ○ Sağlam Veri Güvenliği: Şifreleme (örneğin, ağ trafiği için TLS 1.3 16), güvenlik 
 duvarları, erişim kontrolleri ve düzenli güvenlik denetimleri uygulamak.39 
+
 ○ Çalışan Eğitimi: Personelin uyumluluk gereksinimlerini anlamasını sağlamak.40 
+
 ○ Olay Müdahale Planı: Veri ihlallerine karşı hazırlıklı olmak.40 
+
 ● Cezalar: Uygunsuzluk, önemli para cezalarına yol açabilir (örneğin, CCPA için ihlal 
 başına 2.500-7.500 dolar, GDPR için ciddiyete göre önemli cezalar).39 
 Yayıncı Avı için Pratik Çıkarımlar: "Yayıncı Avı Projesi", ağ trafiğini yakalama ve analiz 
@@ -920,6 +956,7 @@ ve daha fazla kişisel veri içerdiğinde, yasal ve etik çerçeveler artık son
 bir şey değil, herhangi bir ağ adli bilişim veya güvenlik projesinin fizibilitesini ve 
 metodolojisini şekillendiren temel bir unsur haline gelmektedir. Bu, hukuki ve gizlilik 
 uzmanlığını teknik becerilerle birleştiren çok disiplinli bir yaklaşım gerektirmektedir. 
+
 IV. Sonuç ve Tavsiyeler 
 "Yayıncı Avı Projesi"nin hedeflerine ulaşması, modern ağ ortamının karmaşık 
 zorluklarını aşmak için ileri düzey tekniklerin ve stratejilerin benimsenmesini 
@@ -928,32 +965,41 @@ otomasyon ihtiyacı gibi temel zorlukları ele alan on kritik eğilimi ortaya ko
 Geleneksel Derin Paket İncelemesinden (DPI) YZ/ML odaklı meta veri analizine geçiş, 
 ölçeklenebilirlik için Python betiklemenin gerekliliği ve altyapı haritalaması için çok 
 kaynaklı istihbaratın önemi, projenin başarısı için merkezi unsurlardır. 
+
 Eyleme Dönük Tavsiyeler: 
+
 1. YZ/ML Yeteneklerine Yatırım Yapın: Şifreli trafik sınıflandırması ve anomali 
 tespiti için YZ/ML uzmanlığının ve araçlarının geliştirilmesine veya edinilmesine 
 öncelik verilmelidir. Meta verilerden özellik mühendisliğine ve model eğitimi için 
 VisQUIC gibi veri kümelerinden yararlanmaya odaklanılmalıdır. 
+
 2. Otomasyonu Benimseyin: Otomatik paket yakalama, filtreleme, analiz ve 
 raporlama için Python (PyShark, Scapy) projenin tüm aşamalarına tam olarak 
 entegre edilmelidir. Bu, verimliliği ve tekrarlanabilirliği önemli ölçüde artıracaktır. 
 3. Özel Dissector Uzmanlığı Geliştirin: Tescilli akış protokollerini analiz etmek için 
 tersine mühendislik ve özel Wireshark dissector geliştirme (Lua/C) becerileri 
 geliştirilmelidir. Bu, platformların iç işleyişine dair derinlemesine bilgi sağlayacaktır. 
+
 4. Bütünsel Altyapı Haritalaması: Gelişmiş DNS sorguları, ASN aramaları ve IP 
 coğrafi konumlandırmayı birleştirerek CDN ve sunucu tanımlamasına çok katmanlı 
 bir yaklaşım uygulanmalıdır. Bu, akış altyapısının dağıtık ve dinamik doğasının 
 kapsamlı bir şekilde anlaşılmasını sağlayacaktır. 
+
 5. Bulut Farkındalıklı Adli Bilişim: Bulut tabanlı altyapıyı hesaba katmak için 
 metodolojiler uyarlanmalı, bulut yerel izleme araçlarından yararlanılmalı ve veri 
 parçalanması sorunları ele alınmalıdır. 
+
 6. Tehdit İstihbaratını Entegre Edin: Potansiyel tehlikeleri ve içeriden tehditleri 
 belirlemek için ağ analizi bulguları dijital kimlik maruziyeti istihbaratıyla 
 ilişkilendirilmelidir. Bu, projenin güvenlik boyutunu güçlendirecektir. 
+
 7. Proaktif Güvenlik Duruşu: Meşru akış trafiğini onu taklit eden kötü niyetli 
 etkinliklerden ayırmak için tehdit avcılığı prensipleri uygulanmalıdır. 
+
 8. Etik ve Yasal Uyumluluğa Öncelik Verin: Veri gizliliği düzenlemeleri (GDPR, 
 CCPA), veri toplama ve depolamadan analiz ve raporlamaya kadar projenin her 
 aşamasına dahil edilmeli, bilgilendirilmiş onay ve veri minimizasyonu sağlanmalıdır. 
+
 Geleceğe Bakış: 
 Şifrelemenin (örneğin, kuantum dirençli kriptografi) sürekli evrimi, analiz tekniklerinin 
 sürekli adaptasyonunu gerektirecektir. Ağ mimarilerinin (5G, IoT, uç bilişim) artan 
@@ -961,7 +1007,9 @@ karmaşıklığı, daha sofistike, gerçek zamanlı ve otomatik çözümlerin ge
 koyacaktır. Ağ analizinin YZ, davranışsal analitik ve kimlik istihbaratıyla yakınlaşması, ağ 
 güvenliği ve adli bilişimin geleceğini tanımlayacak, "Yayıncı Avı" gibi projeleri giderek 
 artan bir şekilde disiplinlerarası uzmanlığa bağımlı hale getirecektir. 
+
 Alıntılanan çalışmalar 
+
 1. Exploring QUIC Dynamics: A Large-Scale Dataset for Encrypted Traffic Analysis - 
 arXiv, erişim tarihi Haziran 5, 2025, https://arxiv.org/html/2410.03728v6 
 2. Exploiting QUIC's Server Preferred Address Feature to Perform Data Exfiltration 
