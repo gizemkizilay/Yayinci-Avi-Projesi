@@ -397,9 +397,10 @@ veya analiz için belirli akış davranışlarını simüle etmek için faydalı
 akış platformları için, derin yük incelemesi ve detaylı protokol analizi için özel 
 Wireshark dissektörleri (Lua betikleme veya yerel entegrasyon için C kullanılarak) 
 geliştirmek esastır.26 
+
 ● Dissektör İşlevselliği: Özel bir dissektör, protokol alanlarını ayrıştırır, görüntüleme 
 filtresi yeteneklerini tanımlar ve Wireshark içinde detaylı görselleştirmeye olanak 
-tanır.27 Tam bir spesifikasyon olmasa bile, gözlemlenen kalıplara (örneğin, belirli 
+tanır. Tam bir spesifikasyon olmasa bile, gözlemlenen kalıplara (örneğin, belirli 
 bayt dizileri, uzunluk alanları) dayanarak bilinmeyen protokolleri tanımlamak için 
 sezgisel dissektörler geliştirilebilir.27 
 Yayıncı Avı için Pratik Çıkarımlar: Bu, projenin otomasyon aşamasını mümkün 
@@ -413,21 +414,22 @@ arayüz sağlamaktadır. Bu durum, Python'ı paket yakalama, filtreleme, analiz 
 raporlamayı birbirine bağlayan kritik bir orkestrasyon katmanı olarak 
 konumlandırmaktadır. "Büyük miktarda ağ verisini verimli bir şekilde işleme" ve "belirli 
 tehditlere göre uyarlanmış özel, yeniden kullanılabilir avcılık betikleri oluşturma" 
-yeteneği 24, bu otomasyonun doğrudan bir sonucudur. Bu, ağ adli bilişimi ve analizinin 
+yeteneği, bu otomasyonun doğrudan bir sonucudur. Bu, ağ adli bilişimi ve analizinin 
 geleceğinin, verinin hacmini ve karmaşıklığını yönetmek için giderek artan bir şekilde 
 betikleme ve otomasyona dayanacağını göstermektedir. Manuel analiz, otomatik ön 
 işlem ve filtreleme ilgi alanlarını belirledikten sonra derinlemesine bir adım haline 
 gelmektedir. 
 Proje, platformların altyapısı ve protokolleri de dahil olmak üzere nasıl çalıştığını 
 anlamayı amaçlamaktadır. Birçok akış platformu tescilli öğeler kullanmaktadır. 
-Şifreleme yük incelemesini sınırlasa da, özel dissektörler 27, şifre çözme mümkünse 
+Şifreleme yük incelemesini sınırlasa da, özel dissektörler, şifre çözme mümkünse 
 (örneğin, kontrollü şifre çözme için SSL anahtarları aracılığıyla 1) veya belirli kısımlar 
 şifrelenmemişse, bu tescilli protokolleri programatik olarak anlamanın tek yoludur. Özel 
-alanlar ve filtreler tanımlama yeteneği 27, tersine mühendislik için doğrudan bir 
+alanlar ve filtreler tanımlama yeteneği, tersine mühendislik için doğrudan bir 
 kolaylaştırıcıdır. Bu, şifreli tüneller içinde bile özel protokollerin artan kullanımının, özel 
 tersine mühendislik becerileri ve araçları gerektirdiğini göstermektedir. Sezgisel 
-dissektörlerin geliştirilmesi 27, tam spesifikasyonlar mevcut olmadığında ilk analiz için 
+dissektörlerin geliştirilmesi, tam spesifikasyonlar mevcut olmadığında ilk analiz için 
 pratik bir yaklaşım olduğunu göstermektedir. 
+
 3. Uygulama ve Kullanıcı Haritalaması için Davranışsal Profilleme ve Akış Tabanlı 
 Analiz 
 Şifreleme paket içeriğini gizlediğinden, ağ akışlarının davranışsal özelliklerini analiz 
