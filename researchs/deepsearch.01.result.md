@@ -1,6 +1,7 @@
 Çevrimiçi Akış Platformları için Gelişmiş Ağ Trafiği Analizi ve 
 Altyapı Tespiti: Yayıncı Avı Projesi için 2025 Yılı Teknikleri ve 
 Eğilimleri 
+
 I. Yönetici Özeti 
 "Yayıncı Avı Projesi", Twitch, YouTube Stream, Microsoft Teams, Google Meet ve Zoom 
 gibi başlıca çevrimiçi yayın ve iletişim platformları tarafından kullanılan IP adreslerini, 
@@ -27,6 +28,7 @@ gerçekleştirmek için gerekli olan en son ve en etkili on tekniği ve eğilimi
 detaylandırmaktadır. Bu teknikler, şifrelenmiş trafiğin analizinden otomasyona, 
 davranışsal profillemeden altyapı haritalamasına kadar geniş bir yelpazeyi 
 kapsamaktadır. 
+
 II. Çevrimiçi Akış ve İletişim Altyapısının Gelişen Manzarası 
 Çevrimiçi akış ve iletişim platformları, internet trafiğinin önemli bir bölümünü 
 oluşturmakta ve sürekli gelişen ağ teknolojileriyle birlikte karmaşık bir altyapı 
