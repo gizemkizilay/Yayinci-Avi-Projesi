@@ -123,11 +123,13 @@ sınırlamaları göz önüne alındığında, Yapay Zeka (YZ) ve Makine Öğren
 etmek için vazgeçilmez hale gelmektedir.1 Bu yaklaşım, yük içeriği yerine 
 gözlemlenebilir meta veri özelliklerinin analizine odaklanmaktadır. 
 Şifrelenmiş Trafik Sınıflandırma Teknikleri: 
+
 ● Meta Veri Analizi: Paket boyutu, paketler arası varış süreleri, akış süresi, paket 
 yönü ve akışlardaki bayt dağılımı gibi özelliklere odaklanılmaktadır.11 Bu 
 "gözlemlenebilir paket özellikleri", protokol sınıflandırması ve şifrelenmiş trafik 
 parmak izi için yüksek doğruluk (örneğin, VisQUIC verileri kullanılarak HTTP/3 yanıt 
 tahmini için %97) sağlayabilmektedir.1 
+
 ● Dalgacık Dönüşümleri ve Eğilim Özellikleri: Dalgacık Dönüşümleri (WT) gibi 
 gelişmiş özellik çıkarma teknikleri, ağ trafiğinin hem zaman hem de frekans alanı 
 özelliklerini yakalayarak trafiğin davranışına kapsamlı bir bakış sunmaktadır.11 
@@ -135,6 +137,7 @@ Eğilim analizi ile birleştirildiğinde, bu özellikler YZ modellerinin sağlam
 artırarak dinamik internet trafiği modellerine karşı dirençli hale gelmelerini 
 sağlamaktadır.11 Bu yaklaşım, veri kümesi filtrelemesiyle bile yüksek F1 puanları 
 (örneğin, Random Forest ile VPN tespiti için %99) göstermiştir.12 
+
 ● Makine Öğrenimi Modelleri: Çeşitli ML ve Derin Öğrenme (DL) algoritmaları 
 kullanılmaktadır. Random Forest (RF) ve Sinir Ağları (NN), şifrelenmiş trafik 
 sınıflandırmasında güçlü performans sergilemektedir.12 Otomatik kodlayıcılar 
@@ -146,6 +149,7 @@ belirlemekte ve tahmine dayalı analizler aracılığıyla düzeltme eylemlerini
 otomatikleştirebilmektedir.18 Bu, tehlikeye atılmış bir akış hesabını veya yeni bir 
 saldırı vektörünü gösterebilecek olağandışı iletişim modellerini belirlemek için kritik 
 öneme sahiptir.19 
+
 ● Temel Çizgilerin Oluşturulması: ML modelleri, geçmiş verilerden "normal" ağ 
 davranışını öğrenmekte ve sapmaları anomali olarak işaretlemektedir.19 Bu, 
 istatistiksel aykırı değerlerin (örneğin, ortalama trafiğin standart sapmasının 
@@ -365,28 +369,31 @@ filtreleme, görselleştirme, protokol desteği ve istatistiksel analiz yetenekl
 sunmaktadır.22 Ağ sorun giderme, güvenlik denetimi, adli bilişim ve performans 
 optimizasyonu için kritik öneme sahiptir.22 
 Otomasyon için Python (PyShark/Scapy): 
+
 ● PyShark bir TShark Sarmalayıcısı Olarak: PyShark, Wireshark'ın komut satırı 
 arayüzü olan TShark için güçlü bir Python sarmalayıcısı olarak hizmet 
 vermektedir.24 Paket verilerine programatik erişim sağlayarak, ağ arayüzlerinden 
 canlı trafik analizine veya mevcut PCAP dosyalarının işlenmesine olanak 
 tanımaktadır.24 
+
 ● Otomatik İş Akışları: PyShark, hem BPF yakalama filtrelerini (yakalama sırasında 
 alakasız paketleri göz ardı ederek kaynak tasarrufu yapmak için) hem de 
 görüntüleme filtrelerini (yakalama sonrası analiz için) desteklemektedir.24 Bu, 
 karmaşık tehdit avcılığını, veri çözmeyi/şifre çözmeyi (anahtarlar mevcutsa), 
 davranışsal analizi ve diğer güvenlik araçlarıyla entegrasyonu otomatikleştirmek 
 için hayati öneme sahiptir.24 
+
 ● Scapy Entegrasyonu: Başka bir Python kütüphanesi olan Scapy, paket oluşturma 
 ve manipülasyonuna olanak tanıyarak PyShark'ı tamamlamaktadır. Bu, aktif testler 
 veya analiz için belirli akış davranışlarını simüle etmek için faydalı olabilir.25 
 Özel Dissektör Geliştirme (Lua/C): 
+
 ● Tescilli Protokolleri Ele Alma: Tescilli veya daha az yaygın protokoller kullanan 
 akış platformları için, derin yük incelemesi ve detaylı protokol analizi için özel 
 Wireshark dissektörleri (Lua betikleme veya yerel entegrasyon için C kullanılarak) 
 geliştirmek esastır.26 
 ● Dissektör İşlevselliği: Özel bir dissektör, protokol alanlarını ayrıştırır, görüntüleme 
-f
- iltresi yeteneklerini tanımlar ve Wireshark içinde detaylı görselleştirmeye olanak 
+filtresi yeteneklerini tanımlar ve Wireshark içinde detaylı görselleştirmeye olanak 
 tanır.27 Tam bir spesifikasyon olmasa bile, gözlemlenen kalıplara (örneğin, belirli 
 bayt dizileri, uzunluk alanları) dayanarak bilinmeyen protokolleri tanımlamak için 
 sezgisel dissektörler geliştirilebilir.27 
@@ -422,10 +429,12 @@ Analiz
 etmek büyük önem taşımaktadır. Bu, oturum süresi, veri hacmi, bağlantı modelleri ve 
 etkileşim dizilerini içermektedir.20 
 Akış Tabanlı İzleme (NetFlow, sFlow, IPFIX): 
+
 ● Üst Düzey Görünürlük: Akış tabanlı izleme, ağ trafiğini paket akışlarını yakalayıp 
 inceleyerek analiz etmekte, trafik modelleri, uygulama kullanımı ve genel ağ 
 davranışı hakkında üst düzey bilgiler sağlamaktadır.18 Hibrit, çoklu bulut ve IoT 
 odaklı ağları yönetmek için kritik öneme sahiptir.18 
+
 ● Gerçek Zamanlı Anomali Tespiti: Akış verileri, özellikle YZ/ML ile geliştirildiğinde, 
 anormallikleri anında tespit edebilmekte, şüpheli modelleri belirleyebilmekte ve 
 bant genişliği yönetimini optimize edebilmektedir.18 
@@ -435,12 +444,14 @@ teşhis etmek ve daha derinlemesine bilgi edinmek için en iyi uygulamadır.18 B
 verilerinin makro düzeyde "ne" olduğunu, paket verilerinin ise mikro düzeyde "nasıl" 
 olduğunu açıkladığı çok katmanlı bir yaklaşıma olanak tanımaktadır. 
 Kullanıcı ve Uygulama Haritalaması için Davranışsal Analiz: 
+
 ● IP Adreslerinin Ötesi: Geleneksel ağ analizi genellikle IP adreslerine 
 odaklanmaktadır, ancak bunlar kullanıcı kimlikleriyle eş anlamlı değildir.20 Yeni 
 yaklaşımlar, şifrelenmiş ağ trafiğinden kullanıcıları ve uygulama kullanımlarını, 
 paketlerin gerçek içeriğine erişmeye gerek kalmadan meta verileri, paket 
 boyutlarını, zamanlamayı ve uç noktaları titizlikle inceleyerek belirlemeyi 
 amaçlamaktadır.20 
+
 ● YZ Odaklı Davranışsal Analiz: Doğal Dil İşleme (NLP) ve Makine Öğrenimi dahil 
 olmak üzere YZ teknikleri, şüpheli davranışları, duygu eğilimlerini veya suç niyetini 
 gösteren kalıpları analiz etmek için toplanan verileri kullanmaktadır.29 Esas olarak 
@@ -451,7 +462,7 @@ davranışlarına dayanarak "parmak izini" karakterize etmeye yardımcı olmakta
 şifreli olsa bile. Ayrıca, belirli bir kullanıcının bir platformla olağandışı bir şekilde 
 etkileşimde bulunup bulunmadığını belirlemeye de yardımcı olabilir, bu da potansiyel 
 bir tehdidi veya benzersiz bir aktiviteyi gösterebilir. 
-Şifreli trafiğin zorluğu 2, içerik incelemesinden uzaklaşmayı zorunlu kılmaktadır. 20 
+Şifreli trafiğin zorluğu, içerik incelemesinden uzaklaşmayı zorunlu kılmaktadır. 20 
 numaralı kaynak, yeni N-FAT yaklaşımlarının, kullanıcıları ve uygulama kullanımlarını 
 şifreli trafikten "meta verileri, paket boyutlarını, zamanlamayı ve uç noktaları" 
 inceleyerek belirlediğini açıkça belirtmektedir. Bu durum, şifrelemenin, aktiviteyi açık 
@@ -463,6 +474,7 @@ Bu durum, son derece şifreli ortamlarda bile ağ aktivitesinin "kim" ve "nasıl
 anlamak için kritik öneme sahiptir. 
 4. Gelişmiş CDN Altyapı Haritalaması ve Tanımlaması 
 DNS Çözümlemesi Yoluyla Doğru CDN Haritalaması: 
+
 ● DNS Yönlendirme: CDN'ler, kullanıcı isteklerini en uygun uç sunucuya 
 yönlendirmek için öncelikle DNS yönlendirme yöntemlerini (CDN alan adlarına 
 eşlenen CNAME kayıtları veya doğrudan A/AAAA kayıtları) kullanmaktadır.7 Bu DNS 
@@ -503,7 +515,7 @@ dinamik altyapısını doğru bir şekilde haritalama metodolojisini sağlamakta
 IP'yi değil, hangi CDN'ye ait olduğunu, coğrafi konumunu ve kullanıcıların ona nasıl 
 yönlendirildiğini belirlemektedir. Bu, bir platformun ağ varlığının tam kapsamını 
 anlamak için esastır. 
-7numaralı kaynaklar, DNS'in kullanıcıların "kaynak içerik sunucularından CDN'lere 
+7 numaralı kaynaklar, DNS'in kullanıcıların "kaynak içerik sunucularından CDN'lere 
 yönlendirildiği" 30 ve CDN'lerin "DNS yönlendirme yöntemlerini" 7 kullandığı mekanizma 
 olduğunu sürekli olarak vurgulamaktadır. Bu durum, DNS çözümlemesini CDN 
 haritalaması için ilk ve en kritik istihbarat toplama noktası olarak belirlemektedir. Genel 
